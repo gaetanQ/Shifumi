@@ -1,0 +1,21 @@
+.card_img {
+    width:150px;
+    height:150px;
+    background-color: lightgrey;
+    box-shadow: grey 6px 6px 6px;
+}
+#pierre {
+    width:150px;
+    height:150px;
+}
+#feuille {
+    width:150px;
+    height:150px;
+}
+#ciseaux {
+    width:150px;
+    height:150px;
+}
+.fushimi-img {
+    display: flex;
+    flex-direction: row;
