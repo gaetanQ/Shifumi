@@ -1,16 +1,20 @@
 $(function(){
+  var widgetValues = ['pierre', 'feuille', 'ciseaux'];
+  var valueComputer = Math.floor(Math.random() * widgetValues.length);
+  console.log(valueComputer);
 
-  $("#pierre").draggable({
+  $("#0").draggable({
    
   });
-  $("#feuille").draggable({
+  $("#1").draggable({
   });
-  $("#ciseaux").draggable({
+  $("#2").draggable({
 
   });
-        $("#drop1").droppable({
+  
+  $("#drop1").droppable({
 
-          accept : '#pierre',
+          //accept : '#pierre', '#feuille', '#ciseaux';
           
             drop: function(event, ui) {
               
@@ -22,14 +26,39 @@ $(function(){
             out: function(event, ui) {
                 $(this).css('background', 'cyan');
             }
-        });
-        $("#playAgain").click(function(){
+  });
+  
+  //$("#playAgain").click(function(){
           
 
-        });
-      });
+  });
+
+  $('#drop1').droppable(function() {
+    var valueGamer = parseFloat($(this).val());
+    var valueComputer = [Math.floor(Math.random() * widgetValues.length)];
+    var message = "";
+  
+  if (valueGamer == valueComputer) {
+      message = "Égalité !";
+  }
+  else if (
+      (valueGamer == "pierre" && valueComputer == "ciseau")
+      || (valueGamer == "feuille" && valueComputer == "pierre")
+      || (valueGamer == "ciseau" && valueComputer == "feuille")
+  ) {
+      message = "Gagné !";
+      //your_win++;
+  }
+  else {
+      message = "Perdu !";
+      //opponent_win++;
+  }
+
+   //if l'ordinateur a choisi la valeur pierre alors j'affiche "append" l'image pierre (au lieu d'afficher une alerte j'affiche l'image)
+});
 
 
+   
 
 
 
