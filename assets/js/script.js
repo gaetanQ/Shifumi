@@ -1,4 +1,4 @@
-$(function(){
+$(function(){.
   var widgetValues = ['pierre', 'feuille', 'ciseaux'];
   var valueComputer = Math.floor(Math.random() * widgetValues.length);
   console.log(valueComputer);
