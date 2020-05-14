@@ -1,4 +1,4 @@
-$(function(){ //ouverture de fonction principale
+$(function(){. //ouverture de fonction principale
   var arrayChoices = ['pierre', 'feuille', 'ciseaux']; // Je crée un tableau avec les choix possible de l'ordinateur
   var gamerChoice = null; // Je définis une variable pour le choix du joueur et l'initialise à null. L'idée c'est qu'elle existe au chargement de ma page
   var message ="";
